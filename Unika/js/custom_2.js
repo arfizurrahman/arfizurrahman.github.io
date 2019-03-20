@@ -217,7 +217,7 @@
         /*--------------------------------------------------*/
         /*  Validating expert complete profile form
         /*--------------------------------------------------*/
-       /* $(function () {
+        $(function () {
             // validate form on keyup and submit
             $("#completeProfileForm").validate({
                 rules: {
@@ -312,209 +312,11 @@
                 // }
             });
 
-            
+
 
         });
-*/
-        $(function(){
-            var form = $("#completeProfileForm").show();
 
-            form.steps({
-                headerTag: "h3",
-                bodyTag: "fieldset",
-                transitionEffect: "slideLeft",
-                labels: {
-                    previous: 'Previous',
-                    next: 'Next',
-                    finish: 'Submit',
-                    current: ''
-                },
-                titleTemplate: '<div class="title"><span class="number">#index#</span>#title#</div>',
-                onStepChanging: function (event, currentIndex, newIndex) {
-                    // Allways allow previous action even if the current form is not valid!
-                    if (currentIndex > newIndex) {
-                        return true;
-                    }
-                    
-                    // Needed in some cases if the user went back (clean up)
-                    if (currentIndex < newIndex) {
-                        // To remove error styles
-                        form.find(".body:eq(" + newIndex + ") label.error").remove();
-                        form.find(".body:eq(" + newIndex + ") .error").removeClass("error");
-                    }
-                    form.validate().settings.ignore = ":disabled,:hidden";
-                    return form.valid();
-                },
-                onFinishing: function (event, currentIndex) {
-                    form.validate().settings.ignore = ":disabled";
-                    return form.valid();
-                },
-                onFinished: function (event, currentIndex) {
-                    alert("Submitted!");
-                }
-            }).validate({
-                rules: {
-                    phonenumber: {
-                        required: true,
-                        phone: true
-                    },
-                    gender: "required",
-                    address: "required",
-                    dateOfBirth: "required",
-                    country: "required",
-                    city: "required",
-                    zip: {
-                        required: true,
-                        number: true
-                    },
-                    "job[]": {
-                        required: true,
-                        minlength: 1
-                    },
-                    experience: "required",
-                    cv: {
-                        required: true
-                    },
-                    namOnCard: "required",
-                    cardNumber: "required",
-                    expirationdate: "required",
-                    cvc: "required"
 
-                },
-                messages: {
-                    phonenumber: {
-                        required: "Please enter phone number"
-                    },
-                    gender: "Please select a gender",
-                    address: "Please enter address",
-                    dateOfBirth: "Please enter date of birth",
-                    country: "Please select a country",
-                    city: "Please select a city",
-                    zip: {
-                        required: "Please enter zip code",
-                        number: "Please enter a valid zip code"
-                    },
-                    "job[]": "You must select a job",
-                    experience: "Please select years of experience",
-                    cv: {
-                        required: "Please upload your CV"
-                    },
-                    namOnCard: "Please enter the name on card",
-                    cardNumber: "Please enter card number",
-                    expirationdate: "Please enter expiration date",
-                    cvc: "Please enter cvc code",
-                },
-                errorPlacement: function (error, element) {
-                    if (element.attr("name") == "job[]") {
-                        error.insertAfter("#check-error-msg");
-                    } else {
-                        error.insertAfter(element);
-
-                    }
-                }
-            });
-        });
-        
-        
-        $(function(){
-            var form = $("#completeHirerProfileForm").show();
-
-            form.steps({
-                headerTag: "h3",
-                bodyTag: "fieldset",
-                transitionEffect: "slideLeft",
-                labels: {
-                    previous: 'Previous',
-                    next: 'Next',
-                    finish: 'Submit',
-                    current: ''
-                },
-                titleTemplate: '<div class="title"><span class="number">#index#</span>#title#</div>',
-                onStepChanging: function (event, currentIndex, newIndex) {
-                    // Allways allow previous action even if the current form is not valid!
-                    if (currentIndex > newIndex) {
-                        return true;
-                    }
-                    
-                    // Needed in some cases if the user went back (clean up)
-                    if (currentIndex < newIndex) {
-                        // To remove error styles
-                        form.find(".body:eq(" + newIndex + ") label.error").remove();
-                        form.find(".body:eq(" + newIndex + ") .error").removeClass("error");
-                    }
-                    form.validate().settings.ignore = ":disabled,:hidden";
-                    return form.valid();
-                },
-                
-                onFinishing: function (event, currentIndex) {
-                    form.validate().settings.ignore = ":disabled";
-                    return form.valid();
-                },
-                onFinished: function (event, currentIndex) {
-                    alert("Submitted!");
-                }
-            }).validate({
-                rules: {
-                    phonenumber: {
-                        required: true,
-                        phone: true
-                    },
-                    gender: "required",
-                    address: "required",
-                    dateOfBirth: "required",
-                    country: "required",
-                    city: "required",
-                    zip: {
-                        required: true,
-                        number: true
-                    },
-                    "job[]": {
-                        required: true,
-                        minlength: 1
-                    },
-                    experience: "required",
-                    cv: {
-                        required: true
-                    },
-                    namOnCard: "required",
-                    cardNumber: "required",
-                    expirationdate: "required",
-                    cvc: "required"
-
-                },
-                messages: {
-                    phonenumber: {
-                        required: "Please enter phone number"
-                    },
-                    gender: "Please select a gender",
-                    address: "Please enter address",
-                    dateOfBirth: "Please enter date of birth",
-                    country: "Please select a country",
-                    city: "Please select a city",
-                    zip: {
-                        required: "Please enter zip code",
-                        number: "Please enter a valid zip code"
-                    },
-                    "job[]": "You must select a job",
-                    experience: "Please select years of experience",
-                    cv: {
-                        required: "Please upload your CV"
-                    },
-                    namOnCard: "Please enter the name on card",
-                    cardNumber: "Please enter card number",
-                    expirationdate: "Please enter expiration date",
-                    cvc: "Please enter cvc code",
-                },
-                errorPlacement: function (error, element) {
-                    if (element.attr("name") == "job[]") {
-                        error.insertAfter("#check-error-msg");
-                    } else {
-                        error.insertAfter(element);
-
-                    }
-                }
-            });
-        });
 
         $(function () {
 
@@ -535,8 +337,8 @@
                     picCustomTxt.innerHTML = "No file chosen, yet.";
                 }
             });
-
-
+            
+            
             const realFileBtn = document.getElementById("cv");
             const customBtn = document.getElementById("cv-upload-button");
             const customTxt = document.getElementById("nofile-choosen-text");
