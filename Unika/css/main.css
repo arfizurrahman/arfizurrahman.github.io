@@ -3128,6 +3128,8 @@ input[type=File] {
     }
 
 
-#completeProfileForm label span {
+#completeProfileForm label span ,
+#completeHirerProfileForm label span {
     color: #dc3545;
 }
+
