@@ -77,15 +77,15 @@
                             <h3>
                                 <span class="title_text">Personal Details</span>
                             </h3>
-                            <fieldset>
+                             <fieldset>
                                 <div class="fieldset-content">
                                     <div class="form-row">
                                         <div class="form-group col-md-6">
-                                            <label for="phonenumber">Phone number *</label>
+                                            <label for="phonenumber">Phone number <span>*</span></label>
                                             <input type="text" class="form-control" name="phonenumber" id="phonenumber" placeholder="Phone number">
                                         </div>
                                         <div class="form-group col-md-6">
-                                            <label for="gender">Gender *</label>
+                                            <label for="gender">Gender <span>*</span></label>
                                             <select id="gender" name="gender" class="form-control">
                                                 <option value="">Choose..</option>
                                                 <option>Male</option>
@@ -95,40 +95,41 @@
                                     </div>
                                     <div class="form-row">
                                         <div class="form-group col-md-12">
-                                            <label for="address">Address *</label>
+                                            <label for="address">Address <span>*</span></label>
                                             <input type="text" class="form-control" name="address" id="address" placeholder="e.g. 1234 Main St">
                                         </div>
                                     </div>
                                     <div class="form-row">
+                                        
                                         <div class="form-group col-md-6">
-                                            <label for="country">Date of Birth *</label>
-                                            <input type="text" class="form-control" name="dateOfBirth" id="dateOfBirth" placeholder="Date of birth">
-                                        </div>
-                                        <div class="form-group col-md-6">
-                                            <label for="country">Country *</label>
+                                            <label for="country">Country <span>*</span></label>
                                             <select id="country" name="country" class="form-control">
                                                 <option selected>Denamrk</option>
                                             </select>
                                         </div>
 
                                         <div class="form-group col-md-4">
-                                            <label for="city">City *</label>
+                                            <label for="city">City <span>*</span></label>
                                             <select id="city" name="city" class="form-control">
                                                 <option value="">Choose..</option>
                                                 <option>...</option>
                                             </select>
                                         </div>
                                         <div class="form-group col-md-2">
-                                            <label for="zip">Zip *</label>
+                                            <label for="zip">Zip <span>*</span></label>
                                             <input type="text" class="form-control" name="zip" id="zip">
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label for="country">Date of Birth <span>*</span></label>
+                                            <input type="text" class="form-control" name="dateOfBirth" id="dateOfBirth" placeholder="Date of birth">
                                         </div>
                                          <div class="form-group col-md-6">
                                         <label for="profilepic">Profile Picture</label>
-                                        <div class="cv-upload">
+                                        <div class="file-upload">
                                             <input type="file" id="profilepic" class="form-control-file" name="profilepic" accept=".jpeg, .jpg, .png" />
-                                            <div class="custom-cv-btn">
-                                                <button type="button" id="cv-upload-button">Choose Photo</button>
-                                                <span id="nofile-choosen-text">No file chosen, yet.</span>
+                                            <div class="profile-pic-btn">
+                                                <button type="button" id="pic-upload-button">Choose Photo</button>
+                                                <span id="pic-choosen-text">No photo chosen, yet.</span>
                                             </div>
                                         </div>
                                     </div>
@@ -147,7 +148,7 @@
 
                                     </div>
                                     <div class="fieldset-footer">
-                                        <span>Step 1 of 2</span>
+                                        <span>Step 1 of 3</span>
                                     </div>
                                 </div>
                             </fieldset>
@@ -159,7 +160,7 @@
                             <fieldset>
                                 <div class="fieldset-content">
 
-                                    <div class="card-header">
+                                    <div class="card-header mb-2">
                                         <div class="row">
                                             <div class="col-md-6 cc-images">
                                                 <img class="img-fluid cc-img" src="images/creditcardicons.png">
@@ -169,22 +170,22 @@
 
                                     <div class="form-row">
                                         <div class="form-group col-md-6">
-                                            <label for="namOnCard">Name on Card *</label>
+                                            <label for="namOnCard">Name on Card <span>*</span></label>
                                             <input type="text" class="form-control" name="namOnCard" id="namOnCard" placeholder="Name on card">
                                         </div>
                                         <div class="form-group col-md-6">
-                                            <label for="cardNumber">Card Number *</label>
+                                            <label for="cardNumber">Card Number <span>*</span></label>
                                             <input type="text" class="form-control" name="cardNumber" id="cardNumber" placeholder="Card number">
                                         </div>
                                     </div>
                                     <div class="form-row">
 
                                         <div class="form-group col-md-6">
-                                            <label for="expirationdate">Expiration Date *</label>
+                                            <label for="expirationdate">Expiration Date <span>*</span></label>
                                             <input type="text" class="form-control" name="expirationdate" id="expirationdate" placeholder="MM/YY">
                                         </div>
                                         <div class="form-group col-md-6">
-                                            <label for="cvc">CVC *</label>
+                                            <label for="cvc">CVC <span>*</span></label>
                                             <input type="text" class="form-control" name="cvc" id="cvc" placeholder="CVC">
                                         </div>
 
@@ -193,7 +194,7 @@
                                 </div>
 
                                 <div class="fieldset-footer">
-                                    <span>Step 2 of 2</span>
+                                    <span>Step 3 of 3</span>
                                 </div>
                             </fieldset>
                         </form>
