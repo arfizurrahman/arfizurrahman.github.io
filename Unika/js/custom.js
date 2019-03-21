@@ -1,8 +1,15 @@
 (function ($) {
 
+/* ======================================
+                Preloader
+====================================== */
+$(window).on("load", function () {
+    $('#sk-three-bounce').fadeOut();
+    $('#preloader').delay(350).fadeOut('slow');
+});
+
 
     $(document).ready(function () {
-
 
 
         /*--------------------------------------------------*/
@@ -512,7 +519,7 @@
 
         $(function () {
             // validate signup form on keyup and submit
-            $("#expertRegistrationForm, #hirerRegistrationForm, #loginForm").validate({
+            $("#expertRegistrationForm, #hirerRegistrationForm").validate({
                 rules: {
                     firstname: "required",
                     lastname: "required",
@@ -525,7 +532,7 @@
                         minlength: 6,
                         equalTo: "#password"
                     },
-                    emaila: {
+                    email: {
                         required: true,
                         email: true
                     },
@@ -547,11 +554,52 @@
                         minlength: "Password too short",
                         equalTo: "Passwords didn't match!"
                     },
-                    email: "Please enter a valid email address",
+                    email: {
+                        required: "Please enter email address",
+                        email: "Please enter a valid email address"
+                    },
                     confirmemail: {
                         required: "Please confirm email address",
                         email: "Please enter a valid email address",
                         equalTo: "Email addresses didn't match!"
+                    }
+                }
+            });
+
+        });
+
+        $(function () {
+            // validate signup form on keyup and submit
+            $("#loginForm").validate({
+                rules: {
+                    password: {
+                        required: true
+                    },
+                    email: {
+                        required: true,
+                        email: true
+                    }
+                },
+                messages: {
+
+                    password: {
+                        required: "Please enter password"
+                    },
+
+                    email: {
+                        required: "Please enter email address",
+                        email: "Please enter a valid email address"
+                    },
+
+                },
+                errorPlacement: function (error, element) {
+                    if (element.attr("name") == "email") {
+                        error.insertAfter("#loginEmailErrorMsg");
+                    } else if (element.attr("name") == "password") {
+                        error.insertAfter("#loginPassErrorMsg");
+                    } else {
+                        error.insertAfter(element);
+
                     }
                 }
             });
@@ -812,14 +860,6 @@
                         required: true,
                         number: true
                     },
-                    "job[]": {
-                        required: true,
-                        minlength: 1
-                    },
-                    experience: "required",
-                    cv: {
-                        required: true
-                    },
                     namOnCard: "required",
                     cardNumber: "required",
                     expirationdate: "required",
@@ -838,11 +878,6 @@
                     zip: {
                         required: "Please enter zip code",
                         number: "Please enter a valid zip code"
-                    },
-                    "job[]": "You must select a job",
-                    experience: "Please select years of experience",
-                    cv: {
-                        required: "Please upload your CV"
                     },
                     namOnCard: "Please enter the name on card",
                     cardNumber: "Please enter card number",
@@ -908,23 +943,24 @@
             });
         });
 
-        
+
         /*----------------------------------------------------*/
-	/*  Inline CSS replacement for backgrounds
-	/*----------------------------------------------------*/
-	function inlineBG() {
+        /*  Inline CSS replacement for backgrounds
+        /*----------------------------------------------------*/
+        function inlineBG() {
 
-		// Common Inline CSS
-		$(".single-page-header, .intro-banner").each(function() {
-			var attrImageBG = $(this).attr('data-background-image');
+            // Common Inline CSS
+            $(".single-page-header, .intro-banner").each(function () {
+                var attrImageBG = $(this).attr('data-background-image');
 
-	        if(attrImageBG !== undefined) {
-	        	$(this).append('<div class="background-image-container"></div>');
-	            $('.background-image-container').css('background-image', 'url('+attrImageBG+')');
-	        }
-		});
+                if (attrImageBG !== undefined) {
+                    $(this).append('<div class="background-image-container"></div>');
+                    $('.background-image-container').css('background-image', 'url(' + attrImageBG + ')');
+                }
+            });
 
-	} inlineBG();
+        }
+        inlineBG();
 
 
         /*----------------------------------------------------*/

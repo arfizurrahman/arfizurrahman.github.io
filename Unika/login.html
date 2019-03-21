@@ -41,6 +41,13 @@
 
 <body>
 
+    <div id="preloader">
+        <div class="sk-three-bounce">
+        <div class="sk-child sk-bounce1"></div>
+        <div class="sk-child sk-bounce2"></div>
+        <div class="sk-child sk-bounce3"></div>
+      </div>
+    </div>
     <!-- Wrapper -->
     <div id="wrapper">
 
@@ -74,7 +81,7 @@
                         <nav id="navigation">
                             <ul id="responsive">
 
-                               <li><a href="#">Pages</a>
+                                <li><a href="#">Pages</a>
                                     <ul class="dropdown-nav">
                                         <li><a href="index.html">Index1</a></li>
                                         <li><a href="index2.html">Index2</a></li>
@@ -90,7 +97,7 @@
                                         <li><a href="expert-profile-details.html">Expert profile details page</a></li>
                                         <li><a href="hirer-profile-setting.html">Hirer profile settings page</a></li>
                                         <li><a href="hirer-profile-details.html">Hirer profile details page</a></li>
-                                       
+
                                     </ul>
                                 </li>
                                 <li><a href="#">Browse</a></li>
@@ -98,8 +105,8 @@
 
                                 <li><a href="#">Contact</a></li>
                                 <li><a href="#">FAQ</a></li>
-                                
-                               <li><a class="btn btn-general btn-blue " role="button" href="expert-registration.html">Apply as an Expert</a></li>
+
+                                <li><a class="btn btn-general btn-blue " role="button" href="expert-registration.html">Apply as an Expert</a></li>
                                 <li><a class="btn btn-general btn-orange" role="button" href="hirer-registration.html">Hire Experts</a></li>
                                 <li><a href="login.html">Login</a></li>
 
@@ -147,21 +154,34 @@
                             <form id="loginForm" method="post">
 
                                 <div class="row">
-                                    <div class="col mb-3">
-                                        <input type="email" class="form-control" name="email" id="email" placeholder="Email *" required>
+                                    <div class="col">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text"><i class="far fa-user"></i></div>
+                                            </div>
+                                            <input type="email" class="form-control" name="email" id="email" placeholder="Email *">
+                                        </div>
+                                        <label id="loginEmailErrorMsg"></label>
+
                                     </div>
 
                                 </div>
                                 <div class="row">
                                     <div class="col mb-3">
-                                        <input type="password" class="form-control" name="password" id="password" placeholder="Password *" required required>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text"><i class="far fa-lock"></i></div>
+                                            </div>
+                                            <input type="password" class="form-control" name="password" id="password" placeholder="Password *">
+                                        </div>
+                                        <label id="loginPassErrorMsg"></label>
                                     </div>
 
 
                                 </div>
                                 <div class="form-check">
-                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                                    <input type="checkbox" class="form-check-input" id="rememberMe">
+                                    <label class="form-check-label" for="rememberMe">Remember Me</label>
                                 </div>
                                 <div class="form-group">
                                     <div class="form-bottom">
@@ -317,7 +337,7 @@
     <!-- Scripts  -->
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/bootstrap/bootstrap.min.js"></script>
-    <script src="js/jquery.validate.min.js"></script>
+    <script src="vendors/jquery-validation/dist/jquery.validate.min.js"></script>
     <script src="js/mmenu.min.js"></script>
     <script src="js/tippy.all.min.js"></script>
     <script src="js/owl-carousel/owl.carousel.min.js"></script>
