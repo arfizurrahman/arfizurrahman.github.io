@@ -43,10 +43,10 @@
 
     <div id="preloader">
         <div class="sk-three-bounce">
-        <div class="sk-child sk-bounce1"></div>
-        <div class="sk-child sk-bounce2"></div>
-        <div class="sk-child sk-bounce3"></div>
-      </div>
+            <div class="sk-child sk-bounce1"></div>
+            <div class="sk-child sk-bounce2"></div>
+            <div class="sk-child sk-bounce3"></div>
+        </div>
     </div>
     <!-- Wrapper -->
     <div id="wrapper">
@@ -106,8 +106,10 @@
                                 <li><a href="#">Contact</a></li>
                                 <li><a href="#">FAQ</a></li>
 
-                                <li><a class="btn btn-general btn-blue " role="button" href="expert-registration.html">Apply as an Expert</a></li>
-                                <li><a class="btn btn-general btn-orange" role="button" href="hirer-registration.html">Hire Experts</a></li>
+                                <li><a class="btn btn-general btn-blue " role="button"
+                                        href="user-registration.html?user_type=expert">Apply as an Expert</a></li>
+                                <li><a class="btn btn-general btn-orange" role="button"
+                                        href="user-registration.html?user_type=employer">Hire Experts</a></li>
                                 <li><a href="login.html">Login</a></li>
 
                             </ul>
@@ -143,8 +145,8 @@
                             <!-- Horizontal heading -->
                             <div class="section-heading">
 
-                                <h2>Please Login</h2>
-                                <h4>Welcome to the Unika Community</h4>
+                                <h2>Welcome back the Unika Community</h2>
+                                <h4>We're glad to see you again!</h4>
                             </div>
                         </div>
                     </div>
@@ -155,11 +157,32 @@
 
                                 <div class="row">
                                     <div class="col">
+                                        <!-- Account Type -->
+                                    <div class="account-type">
+                                            <div>
+                                                <input type="radio" name="accountTypeRadio" id="expert-radio"
+                                                    class="account-type-radio" checked />
+                                                <label for="expert-radio" class="ripple-effect-dark"><i
+                                                        class="icon-material-outline-account-circle"></i> Expert</label>
+                                            </div>
+    
+                                            <div>
+                                                <input type="radio" name="accountTypeRadio" id="employer-radio"
+                                                    class="account-type-radio" />
+                                                <label for="employer-radio" class="ripple-effect-dark"><i
+                                                        class="icon-material-outline-business-center"></i> Employer</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
                                         <div class="input-group">
                                             <div class="input-group-prepend">
                                                 <div class="input-group-text"><i class="far fa-user"></i></div>
                                             </div>
-                                            <input type="email" class="form-control" name="email" id="email" placeholder="Email *">
+                                            <input type="email" class="form-control" name="email" id="email"
+                                                placeholder="Email *">
                                         </div>
                                         <label id="loginEmailErrorMsg"></label>
 
@@ -167,27 +190,38 @@
 
                                 </div>
                                 <div class="row">
-                                    <div class="col mb-3">
+                                    <div class="col">
                                         <div class="input-group">
                                             <div class="input-group-prepend">
                                                 <div class="input-group-text"><i class="far fa-lock"></i></div>
                                             </div>
-                                            <input type="password" class="form-control" name="password" id="password" placeholder="Password *">
+                                            <input type="password" class="form-control" name="password" id="password"
+                                                placeholder="Password *">
                                         </div>
                                         <label id="loginPassErrorMsg"></label>
                                     </div>
 
 
                                 </div>
-                                <div class="form-check">
-                                    <input type="checkbox" class="form-check-input" id="rememberMe">
-                                    <label class="form-check-label" for="rememberMe">Remember Me</label>
-                                </div>
+                               <div class="row">
+                                   <div class="col">
+                                        <div class="checkbox">
+                                                <input type="checkbox" id="chekcbox1">
+                                                <label for="chekcbox1"><span class="checkbox-icon"></span> Remember Me</label>
+                                            </div>
+                                        
+                                   </div>
+                                   <div class="col text-right">
+                                       <a href="#">Forgot Password?</a>
+                                   </div>
+                               </div>
                                 <div class="form-group">
                                     <div class="form-bottom">
 
                                         <button class="btn btn-general btn-blue" type="submit">Login</button>
-                                        <p>Don't have an account? Register as <a href="hirer-registration.html">Employer</a> Or <a href="expert-registration.html">Expert</a></p>
+                                        <p>Don't have an account? Register as <a
+                                                href="user-registration.html?user_type=employer">Employer</a> Or <a
+                                                href="user-registration.html?user_type=expert">Expert</a></p>
 
                                     </div>
 
@@ -242,9 +276,12 @@
                             <!-- Social -->
                             <div class="footer_social">
                                 <ul>
-                                    <li><a href="#" title="Unika on Facebook" data-tippy-placement="top" data-tippy-theme="light"><i class="fab fa-facebook-f"></i></a></li>
-                                    <li><a href="#" title="Unika on Twitter" data-tippy-placement="top" data-tippy-theme="light"><i class="fab fa-twitter"></i></a></li>
-                                    <li><a href="#" title="Unika on Instagram" data-tippy-placement="top" data-tippy-theme="light"><i class="fab fa-instagram"></i></a></li>
+                                    <li><a href="#" title="Unika on Facebook" data-tippy-placement="top"
+                                            data-tippy-theme="light"><i class="fab fa-facebook-f"></i></a></li>
+                                    <li><a href="#" title="Unika on Twitter" data-tippy-placement="top"
+                                            data-tippy-theme="light"><i class="fab fa-twitter"></i></a></li>
+                                    <li><a href="#" title="Unika on Instagram" data-tippy-placement="top"
+                                            data-tippy-theme="light"><i class="fab fa-instagram"></i></a></li>
                                 </ul>
                             </div>
 
@@ -272,13 +309,13 @@
                         <div class="footer_col">
                             <div class="footer_col_title">Menu</div>
                             <ul>
-                                <li><a href="#"><span>Home</span></a></li>
-                                <li><a href="#"><span>Browse Experts</span></a></li>
-                                <li><a href="#"><span>Prices</span></a></li>
-                                <li><a href="#"><span>Get Yourself Hired</span></a></li>
-                                <li><a href="#"><span>Hire Experts</span></a></li>
-                                <li><a href="#"><span>Login</span></a></li>
-                            </ul>
+                                    <li><a href="index.html"><span>Home</span></a></li>
+                                    <li><a href="#"><span>Browse Experts</span></a></li>
+                                    <li><a href="#"><span>Prices</span></a></li>
+                                    <li><a href="user-registration.html?user_type=expert"><span>Get Yourself Hired</span></a></li>
+                                    <li><a href="user-registration.html?user_type=employer"><span>Hire Experts</span></a></li>
+                                    <li><a href="login.html"><span>Login</span></a></li>
+                                </ul>
                         </div>
 
                     </div>
@@ -320,7 +357,8 @@
                     <div class="col">
                         <!-- Copyright -->
                         <div class="footer_cr text-center">
-                            Copyright &copy;<script>
+                            Copyright &copy;
+                            <script>
                                 document.write(new Date().getFullYear());
                             </script> <span>Unika</span>. All rights reserved.</div>
 
@@ -348,7 +386,8 @@
     <!-- WOW JS -->
     <script src="js/wow.min.js"></script>
     <!-- Google Map JS -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAioFEmwHFJb2rZBeoCdx5dfWaUvT3eDqk&amp;v=3.exp"></script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAioFEmwHFJb2rZBeoCdx5dfWaUvT3eDqk&amp;v=3.exp"></script>
     <script src="js/custom.js"></script>
 
 </body>

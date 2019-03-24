@@ -1,12 +1,12 @@
 (function ($) {
 
-/* ======================================
-                Preloader
-====================================== */
-$(window).on("load", function () {
-    $('#sk-three-bounce').fadeOut();
-    $('#preloader').delay(350).fadeOut('slow');
-});
+    /* ======================================
+                    Preloader
+    ====================================== */
+    $(window).on("load", function () {
+        $('#sk-three-bounce').fadeOut();
+        $('#preloader').delay(350).fadeOut('slow');
+    });
 
 
     $(document).ready(function () {
@@ -30,11 +30,11 @@ $(window).on("load", function () {
                     $(".mmenu-init").mmenu({
                         "counters": true
                     }, {
-                        // configuration
-                        offCanvas: {
-                            pageNodetype: "#wrapper"
-                        }
-                    });
+                            // configuration
+                            offCanvas: {
+                                pageNodetype: "#wrapper"
+                            }
+                        });
 
                     var mmenuAPI = $(".mmenu-init").data("mmenu");
                     var $icon = $(".mmenu-trigger .hamburger");
@@ -97,10 +97,10 @@ $(window).on("load", function () {
         /*--------------------------------------------------*/
         $(".animated-text").typed({
             strings: [
-            "dishwashers and kitchen assistants for canteen, restaurants etc.",
-            "cleaning for companies and individuals.",
-            "drivers for transport or delivery tasks."
-        ],
+                "dishwashers and kitchen assistants for canteen, restaurants etc.",
+                "cleaning for companies and individuals.",
+                "drivers for transport or delivery tasks."
+            ],
             typeSpeed: 60,
             loop: true,
         });
@@ -377,35 +377,12 @@ $(window).on("load", function () {
         /*  Enable Filters Button Tooltip */
         $(window).on('load', function () {
             $('.filter-button-tooltip').css({
-                    left: $('.enable-filters-button').outerWidth() + 48
-                })
+                left: $('.enable-filters-button').outerWidth() + 48
+            })
                 .addClass('tooltip-visible');
         });
 
 
-        // Avatar Switcher
-        function avatarSwitcher() {
-            var readURL = function (input) {
-                if (input.files && input.files[0]) {
-                    var reader = new FileReader();
-
-                    reader.onload = function (e) {
-                        $('.profile-pic').attr('src', e.target.result);
-                    };
-
-                    reader.readAsDataURL(input.files[0]);
-                }
-            };
-
-            $(".file-upload").on('change', function () {
-                readURL(this);
-            });
-
-            $(".upload-button").on('click', function () {
-                $(".file-upload").click();
-            });
-        }
-        avatarSwitcher();
 
 
 
@@ -509,11 +486,33 @@ $(window).on("load", function () {
         });
 
 
+        function avatarSwitcher() {
+            var readURL = function (input) {
+                if (input.files && input.files[0]) {
+                    var reader = new FileReader();
+
+                    reader.onload = function (e) {
+                        $('.profile-pic').attr('src', e.target.result);
+                    };
+
+                    reader.readAsDataURL(input.files[0]);
+                }
+            };
+
+            $(".file-upload").on('change', function () {
+                readURL(this);
+            });
+
+            $(".upload-button").on('click', function () {
+                $(".file-upload").click();
+            });
+        }
+        avatarSwitcher();
 
 
         jQuery.validator.addMethod("phone", function (value, element) {
             // allow any non-whitespace characters as the host part
-            return this.optional(element) || value.length > 9 && /(^(\+?[0-9]+)?((\s|\-|\.)[0-9]+)+$)|(^\(\+?[0-9]+\)((\s|\-|\.)[0-9]+)+$)|(^[0-9]+$)/i.test(value);
+            return this.optional(element) || /(^((\(?\+45\)?)?)(\s?\d{2}\s?\d{2}\s?\d{2}\s?\d{2})$)/i.test(value);
         }, 'Please enter a valid phone number.');
 
 
@@ -572,6 +571,9 @@ $(window).on("load", function () {
             // validate signup form on keyup and submit
             $("#loginForm").validate({
                 rules: {
+                    accountTypeRadio: {
+                        required: true
+                    },
                     password: {
                         required: true
                     },
@@ -895,25 +897,30 @@ $(window).on("load", function () {
             });
         });
 
+
+
+
         $(function () {
 
-            const profilePicBtn = document.getElementById("profilepic");
-            const picUploadBtn = document.getElementById("pic-upload-button");
-            const picCustomTxt = document.getElementById("pic-choosen-text");
+            // var readURL = function (input) {
+            //     if (input.files && input.files[0]) {
+            //         var reader = new FileReader();
 
-            picUploadBtn.addEventListener("click", function () {
-                profilePicBtn.click();
-            });
+            //         reader.onload = function (e) {
+            //             $('.profile-pic').attr('src', e.target.result);
+            //         };
 
-            profilePicBtn.addEventListener("change", function () {
-                if (profilePicBtn.value) {
-                    picCustomTxt.innerHTML = profilePicBtn.value.match(
-                        /[\/\\]([\w\d\s\.\-\(\)]+)$/
-                    )[1];
-                } else {
-                    picCustomTxt.innerHTML = "No file chosen, yet.";
-                }
-            });
+            //         reader.readAsDataURL(input.files[0]);
+            //     }
+            // };
+
+            // $("#image-upload").on('change', function () {
+            //     readURL(this);
+            // });
+
+            // $(".image-file-upload").on('click', function () {
+            //     $("#image-upload").click();
+            // });
 
 
             const realFileBtn = document.getElementById("cv");
@@ -932,6 +939,40 @@ $(window).on("load", function () {
                 } else {
                     customTxt.innerHTML = "No file chosen, yet.";
                 }
+            });
+
+
+            $image_crop = $('#image_demo').croppie({
+                enableExif: true,
+                viewport: {
+                    width: 200,
+                    height: 200,
+                    type: 'square' //circle
+                },
+                boundary: {
+                    width: 300,
+                    height: 300
+                }
+            });
+
+
+            $('#image-upload').on('change', function () {
+
+                var reader = new FileReader();
+                reader.onload = function (event) {
+                    $image_crop.croppie('bind', {
+                        url: event.target.result
+                    }).then(function () {
+                        console.log('jQuery bind complete');
+                    });
+                }
+                reader.readAsDataURL(this.files[0]);
+                $('#uploadimageModal').modal('show');
+            });
+
+            $(".image-file-upload").on('click', function () {
+                alert("sadsd");
+                $("#image-upload").click();
             });
 
         });
@@ -1099,16 +1140,48 @@ $(window).on("load", function () {
             fixedContentPos: false
         });
 
+        /* ======================================
+            Enable or Disable Settings button
+        ====================================== */
+
+
+       
+        $('#profile-edit').on('click', function () {
+            $('#address, #country, #dateOfBirth, #city, #zip, #selfIntroduction').removeAttr('disabled');
+            $('#profile-settings-btn').css('display', 'block');
+
+        });
+
+        $('#account-edit').on('click', function () {
+            $('#firstname, #lastname, #phone, #email').removeAttr('disabled');
+            $('#account-settings-btn').css('display', 'block');
+
+        });
+
+        $('#pass-edit').on('click', function () {
+            $('#currentPass, #newPass, #repeateNewPass').removeAttr('disabled');
+            $('#pass-settings-btn').css('display', 'block');
+
+        });
+
+        $('#skill-edit').on('click', function () {
+            $('.form-check-input, #upload,#experience, .remove-attachment').removeAttr('disabled');
+            $('#skill-settings-btn').css('display', 'block');
+
+        });
+
+        $('#payment-edit').on('click', function () {
+            $('.form-control').removeAttr('disabled');
+            $('#payment-settings-btn').css('display', 'block');
+
+        });
+
+       
+
 
     });
 
 
-
-
-
-    /* ======================================
-                File Upload
-====================================== */
 
 
     /* ======================================

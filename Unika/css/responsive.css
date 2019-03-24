@@ -27,6 +27,12 @@
     .service {
         min-height: 620px;
     }
+    label, legend {
+        font-size: 14px;
+    }
+    .dashboard-box .content.with-padding {
+        padding: 25px;
+    }
 }
 
 /* Small Devices (Potrait Tablets & Small Desktops/Laptops) */
@@ -87,9 +93,7 @@
         font-size: 18px;
     }
 
-    .service-details p {
-        line-height:
-    }
+    
 
     .step {
         min-height: 324px;
@@ -404,7 +408,7 @@
         font-size: 12px;
         padding: 7px 18px;
     }
-
+    
     .about .content-box-sm {
         padding-bottom: 37px;
     }
@@ -477,6 +481,12 @@
 
     .about h4 {
         font-size: 16px;
+    }
+    .dashboard-box .content.with-padding {
+        padding: 20px;
+    }
+    .notify-box {
+        margin-bottom: 20px
     }
 }
 

@@ -40,7 +40,8 @@
 </head>
 
 <body>
-<div id="preloader">
+
+   <div id="preloader">
         <div class="sk-three-bounce">
         <div class="sk-child sk-bounce1"></div>
         <div class="sk-child sk-bounce2"></div>
@@ -80,7 +81,7 @@
                         <nav id="navigation">
                             <ul id="responsive">
 
-                                <li><a href="#">Pages</a>
+                               <li><a href="#">Pages</a>
                                     <ul class="dropdown-nav">
                                         <li><a href="index.html">Index1</a></li>
                                         <li><a href="index2.html">Index2</a></li>
@@ -92,10 +93,11 @@
                                         <li><a href="hirer-registration.html">Hirer registarion</a></li>
                                         <li><a href="hirer-complete-profile.html">Hirer complete profile</a></li>
                                         <li><a href="email-confirmation.html">email confirm page</a></li>
-                                       <li><a href="expert-profile-setting.html">Expert profile settings page</a></li>
+                                        <li><a href="expert-profile-setting.html">Expert profile settings page</a></li>
                                         <li><a href="expert-profile-details.html">Expert profile details page</a></li>
                                         <li><a href="hirer-profile-setting.html">Hirer profile settings page</a></li>
                                         <li><a href="hirer-profile-details.html">Hirer profile details page</a></li>
+                                       
                                     </ul>
                                 </li>
                                 <li><a href="#">Browse</a></li>
@@ -103,8 +105,8 @@
 
                                 <li><a href="#">Contact</a></li>
                                 <li><a href="#">FAQ</a></li>
-                                <li><a class="btn btn-general btn-blue " role="button" href="expert-registration.html">Apply as an Expert</a></li>
-                                <li><a class="btn btn-general btn-orange" role="button" href="hirer-registration.html">Hire Experts</a></li>
+                                <li><a class="btn btn-general btn-blue " role="button" href="user-registration.html?user_type=expert">Apply as an Expert</a></li>
+                                <li><a class="btn btn-general btn-orange" role="button" href="user-registration.html?user_type=employer">Hire Experts</a></li>
                                 <li><a href="login.html">Login</a></li>
 
                             </ul>
@@ -140,7 +142,7 @@
                             <!-- Horizontal heading -->
                             <div class="section-heading">
 
-                                <h2>Employer Registration</h2>
+                                <h2>{UserType} Registration</h2>
                                 <h4>Join the Unika Community</h4>
                             </div>
                         </div>
@@ -148,10 +150,10 @@
                     <div class="row">
                         <div class="col-md-8 registration-form-area">
 
-                            <form id="hirerRegistrationForm" method="post">
+                            <form id="expertRegistrationForm" method="post">
                                 <div class="row">
                                     <div class="col mb-3">
-                                            <input type="text" class="form-control" name="firstname" id="firstname" placeholder="First name *"  >
+                                            <input type="text" class="form-control" name="firstname" id="firstname" placeholder="First name *" >
                                     </div>
                                     <div class="col mb-3">
                                             <input type="text" class="form-control" name="lastname" id="lastname" placeholder="Last name *" required >
@@ -159,7 +161,7 @@
                                 </div>
                                 <div class="row">
                                     <div class="col mb-3">
-                                            <input type="email" class="form-control" name="email" id="email" placeholder="Email *" required>
+                                            <input type="email" class="form-control" name="email" id="email" placeholder="Email *" required >
                                     </div>
                                     <div class="col mb-3">
                                             <input type="email" class="form-control" name="confirmemail" id="confirmemail" placeholder="Confirm Email *" required>
@@ -168,10 +170,10 @@
                                 </div>
                                 <div class="row">
                                     <div class="col mb-3">
-                                            <input type="password" class="form-control" name="password" id="password" placeholder="Password *" required>
+                                            <input type="password" class="form-control" name="password" id="password" placeholder="Password *" required  required>
                                     </div>
                                     <div class="col mb-3">
-                                            <input type="password" class="form-control" id="confirmpassword" placeholder="Confirm password *" name="confirmpassword" required >
+                                            <input type="password" class="form-control" id="confirmpassword" placeholder="Confirm password *" name="confirmpassword" required aria-describedby="confirm-pass-icon">
                                     </div>
 
                                 </div>
@@ -180,7 +182,7 @@
                                    <div class="form-bottom">
                                     
                                         <button class="btn btn-general btn-blue" type="submit">Register</button>
-                                        <p>Already a member? <a href="#">Login</a></p>
+                                        <p>Already a member? <a href="login.html">Login</a></p>
                                     <p>By registering you confirm that you accept our <a href="#">Terms and Conditions</a> and <a href="#">Privacy Policy</a></p>
                                 </div>
                                 
@@ -265,12 +267,12 @@
                         <div class="footer_col">
                             <div class="footer_col_title">Menu</div>
                             <ul>
-                                <li><a href="#"><span>Home</span></a></li>
+                                <li><a href="index.html"><span>Home</span></a></li>
                                 <li><a href="#"><span>Browse Experts</span></a></li>
                                 <li><a href="#"><span>Prices</span></a></li>
-                                <li><a href="#"><span>Get Yourself Hired</span></a></li>
-                                <li><a href="#"><span>Hire Experts</span></a></li>
-                                <li><a href="#"><span>Login</span></a></li>
+                                <li><a href="user-registration.html?user_type=expert"><span>Get Yourself Hired</span></a></li>
+                                <li><a href="user-registration.html?user_type=employer"><span>Hire Experts</span></a></li>
+                                <li><a href="login.html"><span>Login</span></a></li>
                             </ul>
                         </div>
 
