@@ -2621,6 +2621,7 @@ body #backtotop a {
     cursor: pointer
 }
 
+.employer-overview,
 .freelancer-overview {
     text-align: center;
     padding: 38px 20px;
@@ -2630,37 +2631,45 @@ body #backtotop a {
     align-items: center
 }
 
+.employer-overview-inner,
 .freelancer-overview-inner {
     flex: 1
 }
 
+.employer-overview .employer-avatar ,
 .freelancer-overview .freelancer-avatar {
     width: 110px;
     margin: 0 auto;
     position: relative
 }
 
+.employer-overview .employer-avatar img ,
 .freelancer-overview .freelancer-avatar img {
     width: 100%;
     border-radius: 50%;
     cursor: pointer
 }
 
+.employer-overview .employer-avatar .verified-badge,
 .freelancer-overview .freelancer-avatar .verified-badge {
     position: absolute;
     bottom: 0;
     right: 0
 }
 
+.employer-name ,
 .freelancer-name {
     margin-top: 19px
 }
 
+.employer-rating,
 .freelancer-rating {
     margin-top: 5px;
     margin-bottom: -10px
 }
 
+.employer-name h4,
+.employer-name h4 a ,
 .freelancer-name h4,
 .freelancer-name h4 a {
     font-size: 18px;
@@ -7337,6 +7346,396 @@ screen and (-ms-high-contrast:none) {
     padding: 10px 0;
     width: 100%
 }
+.dashboard-box .job-listing-details {
+    box-shadow: none;
+    padding: 10px 0;
+    align-items: center;
+    flex: auto
+}
+
+.dashboard-box .job-listing {
+    box-shadow: none;
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    width: 100%
+}
+
+.dashboard-box .job-listing.width-adjustment {
+    max-width: 60%
+}
+
+.dashboard-box .job-listing h3 a {
+    color: #333;
+    font-size: 18px
+}
+
+.dashboard-box .job-listing .job-listing-company-logo {
+    max-width: 50px
+}
+
+.dashboard-box .job-listing .job-listing-description {
+    padding-top: 0
+}
+
+.dashboard-box .job-listing:hover {
+    transform: none
+}
+
+.dashboard-box .job-listing .job-listing-footer {
+    background-color: transparent;
+    padding: 0;
+    border-radius: none
+}
+
+.dashboard-box .freelancer-overview {
+    padding: 15px 0
+}
+
+.dashboard-box .freelancer-overview-inner {
+    flex: auto;
+    display: flex;
+    align-items: center
+}
+
+.dashboard-box .freelancer-overview .freelancer-name {
+    text-align: left;
+    margin: 0 0 0 30px;
+    width: 100%
+}
+
+.dashboard-box .freelancer-overview .freelancer-avatar {
+    margin: 0;
+    width: 90px
+}
+
+.dashboard-box .freelancer-overview.manage-candidates .freelancer-avatar {
+    align-self: flex-start
+}
+
+.dashboard-task-details {
+    padding-top: 20px;
+}
+.dashboard-task-info {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #f4f4f4;
+    text-align: center;
+    border-radius: 4px;
+    padding: 14px 25px;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    align-self: flex-end;
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: .3s;
+    justify-content: center
+}
+
+.dashboard-box li:hover .dashboard-task-info {
+    background-color: #f0f0f0
+}
+
+.dashboard-task-info li {
+    display: inline-block;
+    border-right: 1px solid #d0d0d0;
+    padding-right: 22px;
+    margin-right: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center
+}
+
+.dashboard-task-info li:last-child {
+    margin-right: 0;
+    padding-right: 0;
+    border: none
+}
+
+.dashboard-task-info li strong {
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    line-height: 22px
+}
+
+.dashboard-task-info li span {
+    display: block;
+    font-size: 14px;
+    color: #888;
+    line-height: 20px
+}
+
+.bid-acceptance {
+    display: flex;
+    color: #289c41;
+    background-color: #e4f6e9;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    border-radius: 4px;
+    padding: 12px 18px;
+    display: inline-block;
+    margin: 0 auto;
+    line-height: 20px
+}
+
+.bid-acceptance span {
+    font-size: 14px;
+    opacity: .86;
+    line-height: 20px
+}
+
+@media(max-width:1366px) {
+    .dashboard-box .job-listing.width-adjustment {
+        max-width: 100%
+    }
+
+    .dashboard-task-info {
+        position: relative;
+        right: 0;
+        top: 0;
+        transform: none;
+        margin: 10px 0 20px
+    }
+
+    .dashboard-task-info.bid-info {
+        margin-bottom: 0;
+        margin-top: 20px
+    }
+}
+
+@media(max-width:768px) {
+    .dashboard-box .freelancer-overview .freelancer-avatar {
+        width: 60px
+    }
+
+    .dashboard-box .freelancer-overview .freelancer-avatar .verified-badge {
+        transform: scale(.8);
+        bottom: -5px;
+        right: -5px
+    }
+
+    .dashboard-box .freelancer-overview .freelancer-name {
+        margin: 0 0 0 25px
+    }
+
+    .dashboard-box .job-listing .job-listing-company-logo {
+        display: none
+    }
+
+    .dashboard-task-info.bid-info,
+    .dashboard-task-info:not(.bid-info) {
+        flex-direction: column;
+        width: 100%
+    }
+
+    .dashboard-task-info li {
+        border-right: none;
+        border-bottom: 1px solid #d0d0d0;
+        padding: 0 0 10px;
+        margin: 0 0 10px;
+        width: 100%
+    }
+
+    .dashboard-task-info li:last-child {
+        border-right: none;
+        border-bottom: none;
+        padding: 0;
+        margin: 0
+    }
+}
+
+
+ul.dashboard-box-list {
+    list-style: none;
+    padding: 0;
+    margin: 0
+}
+
+ul.dashboard-box-list > li {
+    border-bottom: 1px solid #e4e4e4;
+    padding: 0;
+    line-height: 26px;
+    padding: 22px 30px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    flex-flow: row wrap;
+    transition: .3s
+}
+
+ul.dashboard-box-list > li:last-child {
+    border-bottom: none
+}
+
+ul.dashboard-box-list > li:hover {
+    background-color: #fcfcfc
+}
+
+.dashboard-box-list .notification-text {
+    font-size: 14.7px;
+    flex: 1
+}
+
+.dashboard-box-list .notification-icon {
+    flex: 0 0 40px
+}
+
+.dashboard-box-list .notification-text .star-rating {
+    position: relative;
+    top: -18px;
+    line-height: 0;
+    height: 0;
+    display: inline-block;
+    margin: 0 3px;
+    transform: scale(.93)
+}
+
+.buttons-to-right,
+.dashboard-box-list .button.to-right {
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: .3s;
+    box-shadow: 0 0 10px 15px #fff;
+    background-color: #fff
+}
+
+.dashboard-box-list .buttons-to-right.always-visible,
+.dashboard-box-list li:hover .buttons-to-right {
+    opacity: 1
+}
+
+.dashboard-box-list .buttons-to-right.always-visible:not(.single-right-button) {
+    position: relative;
+    transform: none;
+    top: 0;
+    margin: 5px 0 10px -2px;
+    opacity: 1;
+    right: auto;
+    display: inline-block;
+    box-shadow: none;
+    width: 100%;
+    background-color: transparent;
+    box-shadow: none
+}
+
+.dashboard-box-list .button {
+    padding: 6px 15px;
+    line-height: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    margin: 0;
+    display: inline-block;
+    box-shadow: 0 3px 8px rgba(102, 103, 107, .15)
+}
+
+.dashboard-box-list .button i[class*=icon-material] {
+    font-size: 18px;
+    top: 3px;
+    margin-right: 2px;
+    margin-left: -2px
+}
+
+.dashboard-box-list .buttons-to-right .button {
+    margin: 0 0 -6px 2px
+}
+
+.dashboard-box-list .buttons-to-right.always-visible .button {
+    margin: 0 3px 0 0
+}
+
+.dashboard-box .button.red {
+    background-color: #dc3139;
+    box-shadow: 0 3px 8px rgba(234, 65, 81, .15)
+}
+
+.dashboard-box .button.green {
+    background-color: #40b660;
+    box-shadow: 0 3px 8px rgba(64, 182, 96, .15)
+}
+
+.dashboard-box .button.dark {
+    background-color: #333;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, .1)
+}
+
+.dashboard-box .button.gray {
+    background-color: #eee;
+    color: #666;
+    box-shadow: none
+}
+
+.dashboard-box .dashboard-box-list .button:not(.ico):hover,
+.dashboard-box .button.red:not(.ico):hover,
+.dashboard-box .button.green:not(.ico):hover,
+.dashboard-box .button.gray:not(.ico):hover {
+    color: #fff;
+    background-color: #333;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, .1)
+}
+
+.dashboard-box .button.dark:not(.ico):hover {
+    background-color: #66676b;
+    box-shadow: 0 3px 8px rgba(102, 103, 107, .15)
+}
+
+.dashboard-box .button.ico {
+    width: 32px;
+    text-align: center
+}
+
+.dashboard-box .button.ico i {
+    font-size: 15px;
+    margin-left: -7px;
+    top: 2px;
+    position: relative
+}
+
+.dashboard-box .button i.icon-material-outline-check {
+    margin-left: -5px
+}
+
+.dashboard-box .button.ico i[class*=icon-material] {
+    font-size: 18px;
+    margin-left: -8px;
+    top: 3px;
+    position: relative
+}
+
+.dashboard-box-list {
+    box-shadow: none
+}
+
+.dashboard-box-list a.button i {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    top: 1px;
+    font-size: 14px;
+    line-height: 0;
+    margin-left: -2px
+}
+
+.dashboard-box .mark-as-read {
+    float: none;
+    background-color: #f4f4f4;
+    position: absolute;
+    right: 30px;
+    top: 18px
+}
 
 .submit-field {
     margin-bottom: 28px;
@@ -9099,6 +9498,100 @@ screen and (-ms-high-contrast:none) {
 
 .boxed-list-item .item-description {
     margin-top: 15px
+}
+
+
+.radio {
+    display: inline-block;
+    vertical-align: top
+}
+
+.radio label {
+    margin: 3px 0;
+    cursor: pointer;
+    position: relative;
+    padding-left: 29px;
+    line-height: 25px
+}
+
+.radio input[type=radio] {
+    position: absolute;
+    opacity: 0
+}
+
+.radio input[type=radio] + label .radio-label {
+    content: '';
+    background: #fff;
+    border-radius: 100%;
+    border: 2px solid #b4b4b4;
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    position: relative;
+    margin-right: 5px;
+    vertical-align: top;
+    cursor: pointer;
+    text-align: center;
+    transition: all 250ms ease;
+    background-color: #fff;
+    box-shadow: inset 0 0 0 8px #fff;
+    z-index: 100;
+    position: absolute;
+    top: 2px;
+    left: 0
+}
+
+.radio input[type=radio] + label .radio-label:after {
+    background-color: #66676b;
+    content: "";
+    top: 3px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    position: absolute;
+    opacity: 1;
+    transition: .3s;
+    border-radius: 50%;
+    transform: scale(0);
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    z-index: 99
+}
+
+.radio input[type=radio]:checked + label .radio-label {
+    background-color: #66676b;
+    border-color: #66676b;
+    box-shadow: inset 0 0 0 3px #fff
+}
+
+.radio-label:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    background-color: transparent;
+    display: block
+}
+
+.interactive-effect label .radio-label:before {
+    animation: radius-shadow .4s
+}
+
+@keyframes radius-shadow {
+    0% {
+        box-shadow: 0 0 0 0 rgba(102, 103, 107, .4)
+    }
+
+    100% {
+        box-shadow: 0 0 0 10px transparent
+    }
 }
 
 
@@ -11571,7 +12064,8 @@ a.apply-now-button,
 .pagination ul li a.current-page,
 button.button,
 .image-upload__label,
-input:checked + .switch-button{
+input:checked + .switch-button,
+.radio input[type="radio"]:checked + label .radio-label{
      background-color:#1689D6;
 }
 
@@ -11596,7 +12090,8 @@ input:checked + .switch-button{
 .dashboard-nav ul li.active-submenu, 
 .dashboard-nav ul li.active, 
 .dashboard-nav ul li:hover,
-.checkbox input:checked + label span.checkbox-icon {
+.checkbox input:checked + label span.checkbox-icon,
+.radio input[type="radio"]:checked + label .radio-label {
     border-color: #1689D6;
 }
 

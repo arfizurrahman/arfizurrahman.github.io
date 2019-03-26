@@ -744,7 +744,11 @@
                     return form.valid();
                 },
                 onFinished: function (event, currentIndex) {
-                    alert("Submitted!");
+                    Swal.fire(
+                        'Good Job!',
+                        'The submission was successful',
+                        'success'
+                      )
                 }
             }).validate({
                 rules: {
@@ -845,7 +849,11 @@
                     return form.valid();
                 },
                 onFinished: function (event, currentIndex) {
-                    alert("Submitted!");
+                    Swal.fire(
+                        'Good Job!',
+                        'The submission was successful',
+                        'success'
+                      )
                 }
             }).validate({
                 rules: {
@@ -1176,6 +1184,31 @@
 
         });
 
+        $('.removeRequest').on('click', function () {
+            Swal.fire({
+                title: 'Are you sure?',
+                text: "You won't be able to revert this!",
+                type: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Yes, delete it!'
+              }).then((result) => {
+                if (result.value) {
+                    $(this).parent().closest('li').fadeOut(800, function() {
+                        $(this).remove();
+                    });
+                   // $(this).parent().closest('li').remove();
+                  Swal.fire(
+                    'Deleted!',
+                    'Your file has been deleted.',
+                    'success'
+                  )
+                }
+              })
+            
+
+        });
        
 
 

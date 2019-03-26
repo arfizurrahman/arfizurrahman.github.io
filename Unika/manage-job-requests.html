@@ -32,6 +32,7 @@
     <link rel="stylesheet" href="css/material-icon/css/material-design-iconic-font.min.css">
     <!-- Jquery Ui CSS -->
     <link rel="stylesheet" href="vendors/jquery-ui-1.12.1.custom/jquery-ui.min.css" />
+    <link rel="stylesheet" href="vendors/sweetalert2/sweetalert2.min.css" />
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/main.css">
@@ -296,250 +297,282 @@
 
             <!-- Dashboard Sidebar
 	================================================== -->
-    <div class="dashboard-sidebar">
-        <div class="dashboard-sidebar-inner" data-simplebar>
-            <div class="dashboard-nav-container">
+            <div class="dashboard-sidebar">
+                <div class="dashboard-sidebar-inner" data-simplebar>
+                    <div class="dashboard-nav-container">
 
-                <!-- Responsive Navigation Trigger -->
-                <a href="#" class="dashboard-responsive-nav-trigger">
-                    <span class="hamburger hamburger--collapse">
-                        <span class="hamburger-box">
-                            <span class="hamburger-inner"></span>
-                        </span>
-                    </span>
-                    <span class="trigger-title">Dashboard Navigation</span>
-                </a>
+                        <!-- Responsive Navigation Trigger -->
+                        <a href="#" class="dashboard-responsive-nav-trigger">
+                            <span class="hamburger hamburger--collapse">
+                                <span class="hamburger-box">
+                                    <span class="hamburger-inner"></span>
+                                </span>
+                            </span>
+                            <span class="trigger-title">Dashboard Navigation</span>
+                        </a>
 
-                <!-- Navigation -->
-                <div class="dashboard-nav">
-                    <div class="dashboard-nav-inner">
+                        <!-- Navigation -->
+                        <div class="dashboard-nav">
+                            <div class="dashboard-nav-inner">
 
-                        <ul data-submenu-title="Start">
-                            <li class="active"><a href="dashboard.html"><i
-                                        class="icon-material-outline-dashboard"></i> Dashboard</a></li>
-                            <li><a href="#"><i
-                                        class="icon-material-outline-question-answer"></i> Messages <span
-                                        class="nav-tag">2</span></a></li>
-                            <!-- <li><a href="dashboard-bookmarks.html"><i class="icon-material-outline-star-border"></i> Bookmarks</a></li>
-                            <li><a href="dashboard-reviews.html"><i class="icon-material-outline-rate-review"></i> Reviews</a></li>-->
-                        </ul>
-
-                        <ul data-submenu-title="Organize and Manage">
-                            <li><a href="#"><i class="icon-material-outline-business-center"></i> Jobs</a>
-                                <ul>
-                                    <li><a href="manage-job-requests.html">Manage Jobs <span
-                                                class="nav-tag">3</span></a></li>
-                                    
+                                <ul data-submenu-title="Start">
+                                    <li class="active"><a href="dashboard.html"><i
+                                                class="icon-material-outline-dashboard"></i> Dashboard</a></li>
+                                    <li><a href="#"><i
+                                                class="icon-material-outline-question-answer"></i> Messages <span
+                                                class="nav-tag">2</span></a></li>
+                                    <!-- <li><a href="dashboard-bookmarks.html"><i class="icon-material-outline-star-border"></i> Bookmarks</a></li>
+                                    <li><a href="dashboard-reviews.html"><i class="icon-material-outline-rate-review"></i> Reviews</a></li>-->
                                 </ul>
-                            </li>
-                            <!--<li><a href="#"><i class="icon-material-outline-assignment"></i> Tasks</a>
-                                <ul>
-                                    <li><a href="dashboard-manage-tasks.html">Manage Tasks <span class="nav-tag">2</span></a></li>
-                                    <li><a href="dashboard-manage-bidders.html">Manage Bidders</a></li>
-                                    <li><a href="dashboard-my-active-bids.html">My Active Bids <span class="nav-tag">4</span></a></li>
-                                    <li><a href="dashboard-post-a-task.html">Post a Task</a></li>
-                                </ul>
-                            </li>-->
-                        </ul>
 
-                        <ul data-submenu-title="Account">
-                            <li><a href="dashboard-settings.html"><i class="icon-material-outline-settings"></i>
-                                    Settings</a>
-                                <ul>
-                                    <li><a href="account-settings.html">Account Settings </a></li>
-                                    <li><a href="profile-settings.html">Profile Settings</a></li>
-                                    <li><a href="skill-settings.html">Skill Settings</a></li>
-                                    <li><a href="payment-settings.html">Payment Settings</a></li>
+                                <ul data-submenu-title="Organize and Manage">
+                                    <li><a href="#"><i class="icon-material-outline-business-center"></i> Jobs</a>
+                                        <ul>
+                                            <li><a href="manage-job-requests.html">Manage Jobs <span
+                                                        class="nav-tag">3</span></a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                    <!--<li><a href="#"><i class="icon-material-outline-assignment"></i> Tasks</a>
+                                        <ul>
+                                            <li><a href="dashboard-manage-tasks.html">Manage Tasks <span class="nav-tag">2</span></a></li>
+                                            <li><a href="dashboard-manage-bidders.html">Manage Bidders</a></li>
+                                            <li><a href="dashboard-my-active-bids.html">My Active Bids <span class="nav-tag">4</span></a></li>
+                                            <li><a href="dashboard-post-a-task.html">Post a Task</a></li>
+                                        </ul>
+                                    </li>-->
                                 </ul>
-                            </li>
-                            <li><a href="login.html"><i
-                                        class="icon-material-outline-power-settings-new"></i> Logout</a></li>
-                        </ul>
+
+                                <ul data-submenu-title="Account">
+                                    <li><a href="dashboard-settings.html"><i class="icon-material-outline-settings"></i>
+                                            Settings</a>
+                                        <ul>
+                                            <li><a href="account-settings.html">Account Settings </a></li>
+                                            <li><a href="profile-settings.html">Profile Settings</a></li>
+                                            <li><a href="skill-settings.html">Skill Settings</a></li>
+                                            <li><a href="payment-settings.html">Payment Settings</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="login.html"><i
+                                                class="icon-material-outline-power-settings-new"></i> Logout</a></li>
+                                </ul>
+
+                            </div>
+                        </div>
+                        <!-- Navigation / End -->
 
                     </div>
                 </div>
-                <!-- Navigation / End -->
-
             </div>
-        </div>
-    </div>
-    <!-- Dashboard Sidebar / End -->
+            <!-- Dashboard Sidebar / End -->
 
 
-            <!-- Dashboard Content
+            	<!-- Dashboard Content
 	================================================== -->
-            <div class="dashboard-content-container" data-simplebar>
-                <div class="dashboard-content-inner">
+	<div class="dashboard-content-container" data-simplebar>
+		<div class="dashboard-content-inner" >
+			
+			<!-- Dashboard Headline -->
+			<div class="dashboard-headline">
+				<h3>Manage Job Requests</h3>
 
-                    <!-- Dashboard Headline -->
-                    <div class="dashboard-headline">
-                        <h3>Settings</h3>
+				<!-- Breadcrumbs -->
+				<nav id="breadcrumbs" class="dark">
+					<ul>
+						<li><a href="#">Home</a></li>
+						<li><a href="#">Dashboard</a></li>
+						<li>Manage Job Requests</li>
+					</ul>
+				</nav>
+			</div>
+	
+			<!-- Row -->
+			<div class="row">
 
-                        <!-- Breadcrumbs -->
-                        <nav id="breadcrumbs" class="dark">
-                            <ul>
-                                <li><a href="#">Home</a></li>
-                                <li><a href="#">Dashboard</a></li>
-                                <li>Account Settings</li>
-                            </ul>
-                        </nav>
-                    </div>
+				<!-- Dashboard Box -->
+				<div class="col-xl-12">
+					<div class="dashboard-box margin-top-0">
 
-                    <!-- Row -->
-                    <div class="row">
+						<!-- Headline -->
+						<div class="headline">
+							<h3><i class="icon-material-outline-supervisor-account"></i> 3 Requests</h3>
+							<div class="sort-by">
+								<select class="selectpicker hide-tick">
+									<option>Highest First</option>
+									<option>Lowest First</option>
+									<option>Fastest First</option>
+								</select>
+							</div>
+						</div>
 
-                        <div class="col-xl-12">
-                            <div class="notify-box margin-top-15">
-                                <div class="switch-container">
-                                    <label class="switch"><input type="checkbox"><span
-                                            class="switch-button"></span><span class="switch-text">Activate or
-                                            Deactivate
-                                            Account</span></label>
-                                </div>
+						<div class="content">
+							<ul class="dashboard-box-list">
+								<li>
+									<!-- Overview -->
+									<div class="freelancer-overview manage-candidates">
+										<div class="freelancer-overview-inner">
 
-                            </div>
-                        </div>
-                        <!-- Dashboard Box -->
-                        <div class="col-xl-12">
-                            <div class="dashboard-box margin-top-30">
+											<!-- Avatar -->
+											<div class="freelancer-avatar">
+												<div class="verified-badge"></div>
+												<a href="#"><img src="images/user-avatar-big-02.jpg" alt=""></a>
+											</div>
 
+											<!-- Name -->
+											<div class="freelancer-name">
+												<h4><a href="#">David Peterson </a></h4>
 
+												<!-- Details -->
+												<!-- <span class="freelancer-detail-item"><a href="#"><i class="icon-feather-mail"></i> <span class="__cf_email__" data-cfemail="761217001f1236130e171b061a135815191b">[email&#160;protected]</span></a></span> -->
 
-                                <!-- Headline -->
-                                <div class="headline profile-settings">
+												<!-- Rating -->
+												<div class="freelancer-rating">
+													<div class="star-rating" data-rating="5.0"></div>
+												</div>
 
-                                    <h3><i class="icon-material-outline-account-circle"></i> My Account</h3>
+												<!-- Request Details -->
+												<div class="dashboard-task-details">
+                                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto in, 
+                                                            nesciunt sint nostrum sapiente esse odio alias illum repellendus distinctio 
+                                                            iste illo ad quidem corrupti debitis corporis praesentium ipsa cum!</p>
+                                                    </div>
+												
 
-                                    <div class="edit-icon" id="account-edit">
-                                        <i class="icon-feather-edit"></i>
-                                    </div>
-                                </div>
+												<!-- Buttons -->
+												<div class="buttons-to-right always-visible margin-top-25 margin-bottom-0">
+													<a href="#small-dialog-1"  class="popup-with-zoom-anim button ripple-effect"><i class="icon-material-outline-check"></i> Accept Offer</a>
+													<a href="#small-dialog-2" class="popup-with-zoom-anim button dark ripple-effect"><i class="icon-feather-mail"></i> Send Message</a>
+													<a class="button gray ripple-effect ico removeRequest" title="Remove Request" data-tippy-placement="top"><i class="icon-feather-trash-2"></i></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li>
+									<!-- Overview -->
+									<div class="freelancer-overview manage-candidates">
+										<div class="freelancer-overview-inner">
 
-                                <div class="content with-padding">
+											<!-- Avatar -->
+											<div class="freelancer-avatar">
+												<a href="#"><img src="images/user-avatar-placeholder.png" alt=""></a>
+											</div>
 
-                                    <div class="row">
+											<!-- Name -->
+											<div class="freelancer-name">
+												<h4><a href="#">Oldrich Ćuk </a></h4>
 
-
-                                        <div class="form-group col-md-6">
-                                            <label for="firstname">First Name <span>*</span></label>
-                                            <input type="text" class="form-control" name="firstname"
-                                                placeholder="e.g. Jhon" id="firstname" disabled>
-                                        </div>
-
-                                        <div class="form-group col-md-6">
-                                            <label for="lastname">Last Name <span>*</span></label>
-                                            <input type="text" class="form-control" name="lastname" id="lastname"
-                                                placeholder="e.g. Doe" disabled>
-                                        </div>
-                                        <div class="form-group col-md-6">
-                                            <label for="phone">Phone No. <span>*</span></label>
-                                            <input type="text" class="form-control" name="phone" id="phone"
-                                                placeholder="e.g. +45458454445" disabled>
-                                        </div>
-                                        <div class="form-group col-md-6">
-                                            <label for="email">Email <span>*</span></label>
-                                            <input type="email" class="form-control" name="email" id="email"
-                                                placeholder="e.g. example@gmail.com" disabled>
-                                        </div>
-
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <button type="submit" id="account-settings-btn"
-                                                class="btn button btn-general btn-save-changes ripple-effect margin-top-30">Save
-                                                Changes</button>
-                                        </div>
-
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
+												<!-- Details -->
+												<!-- <span class="freelancer-detail-item"><a href="#"><i class="icon-feather-mail"></i> <span class="__cf_email__" data-cfemail="c2adaea6b0aba1aa82a7baa3afb2aea7eca1adaf">[email&#160;protected]</span></a></span>
+												<span class="freelancer-detail-item"><i class="icon-feather-phone"></i> (+421) 123-456-789</span> -->
 
 
+												<!-- Rating -->
+												<span class="company-not-rated">Minimum of 3 votes required</span>
 
-                        <!-- Dashboard Box -->
-                        <div class="col-xl-12">
-                            <div id="test1" class="dashboard-box">
+												<!-- Request Details -->
+												<div class="dashboard-task-details">
+                                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto in, 
+                                                            nesciunt sint nostrum sapiente esse odio alias illum repellendus distinctio 
+                                                            iste illo ad quidem corrupti debitis corporis praesentium ipsa cum!</p>
+                                                    </div>
+												
 
-                                <!-- Headline -->
+												<!-- Buttons -->
+												<div class="buttons-to-right always-visible margin-top-25 margin-bottom-0">
+													<a href="#small-dialog-1"  class="popup-with-zoom-anim button ripple-effect"><i class="icon-material-outline-check"></i> Accept Offer</a>
+													<a href="#small-dialog-2" class="popup-with-zoom-anim button dark ripple-effect"><i class="icon-feather-mail"></i> Send Message</a>
+													<a class="button gray ripple-effect ico removeRequest" title="Remove Request" data-tippy-placement="top"><i class="icon-feather-trash-2"></i></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li>
+									<!-- Overview -->
+									<div class="freelancer-overview manage-candidates">
+										<div class="freelancer-overview-inner">
 
-                                <div class="headline profile-settings">
+											<!-- Avatar -->
+											<div class="freelancer-avatar">
+												<div class="verified-badge"></div>
+												<a href="#"><img src="images/user-avatar-placeholder.png" alt=""></a>
+											</div>
 
-                                    <h3><i class="icon-material-outline-lock"></i> Password & Security</h3>
-                                    <div class="edit-icon" id="pass-edit">
-                                        <i class="icon-feather-edit"></i>
-                                    </div>
-                                </div>
-                                <div class="content with-padding">
-                                    <div class="row">
-                                        <div class="form-group col-md-4">
-                                            <label for="firstname">Current Password <span>*</span></label>
-                                            <input type="text" class="form-control" name="currentPass"
-                                                placeholder="************" id="currentPass" disabled>
-                                        </div>
+											<!-- Name -->
+											<div class="freelancer-name">
+												<h4><a href="#">Kuba Adamczyk </a></h4>
 
-                                        <div class="form-group col-md-4">
-                                            <label for="lastname">New Password <span>*</span></label>
-                                            <input type="text" class="form-control" name="newPass" id="newPass"
-                                                placeholder="************" disabled>
-                                        </div>
-                                        <div class="form-group col-md-4">
-                                            <label for="phone">Repeate New Password <span>*</span></label>
-                                            <input type="text" class="form-control" name="repeateNewPass" id="repeateNewPass"
-                                                placeholder="************" disabled>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <button type="submit" id="pass-settings-btn"
-                                                class="btn button btn-general btn-save-changes ripple-effect margin-top-30">Save
-                                                Changes</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Button -->
+												<!-- Details -->
+												<!-- <span class="freelancer-detail-item"><a href="#"><i class="icon-feather-mail"></i> <span class="__cf_email__" data-cfemail="a9c2dccbc8e9ccd1c8c4d9c5cc87cac6c4">[email&#160;protected]</span></a></span>
+												<span class="freelancer-detail-item"><i class="icon-feather-phone"></i> (+48) 123-456-789</span> -->
 
-                    </div>
-                    <!-- Row / End -->
+												<!-- Rating -->
+												<div class="freelancer-rating">
+													<div class="star-rating" data-rating="5.0"></div>
+												</div>
 
-                    <!-- Footer -->
-                    <div class="dashboard-footer-spacer"></div>
-                    <div class="small-footer margin-top-15">
-                        <div class="small-footer-copyrights">
-                            © 2019 <strong>Unika</strong>. All Rights Reserved.
-                        </div>
-                        <ul class="footer-social-links">
-                            <li>
-                                <a href="#" title="Facebook" data-tippy-placement="top">
-                                    <i class="icon-brand-facebook-f"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" title="Twitter" data-tippy-placement="top">
-                                    <i class="icon-brand-twitter"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" title="Google Plus" data-tippy-placement="top">
-                                    <i class="icon-brand-google-plus-g"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" title="LinkedIn" data-tippy-placement="top">
-                                    <i class="icon-brand-linkedin-in"></i>
-                                </a>
-                            </li>
-                        </ul>
-                        <div class="clearfix"></div>
-                    </div>
-                    <!-- Footer / End -->
+												<!-- Request Details -->
+												<div class="dashboard-task-details">
+                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto in, 
+                                                        nesciunt sint nostrum sapiente esse odio alias illum repellendus distinctio 
+                                                        iste illo ad quidem corrupti debitis corporis praesentium ipsa cum!</p>
+                                                </div>
 
-                </div>
-            </div>
-            <!-- Dashboard Content / End -->
+												<!-- Buttons -->
+												<div class="buttons-to-right always-visible margin-top-25 margin-bottom-0">
+													<a href="#small-dialog-1"  class="popup-with-zoom-anim button ripple-effect"><i class="icon-material-outline-check"></i> Accept Offer</a>
+													<a href="#small-dialog-2" class="popup-with-zoom-anim button dark ripple-effect"><i class="icon-feather-mail"></i> Send Message</a>
+													<a class="removeRequest button gray ripple-effect ico" title="Remove Request" data-tippy-placement="top"><i class="icon-feather-trash-2"></i></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+
+							</ul>
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<!-- Row / End -->
+
+			<!-- Footer -->
+			<div class="dashboard-footer-spacer"></div>
+			<div class="small-footer margin-top-15">
+				<div class="small-footer-copyrights">
+					© 2019 <strong>Hireo</strong>. All Rights Reserved.
+				</div>
+				<ul class="footer-social-links">
+					<li>
+						<a href="#" title="Facebook" data-tippy-placement="top">
+							<i class="icon-brand-facebook-f"></i>
+						</a>
+					</li>
+					<li>
+						<a href="#" title="Twitter" data-tippy-placement="top">
+							<i class="icon-brand-twitter"></i>
+						</a>
+					</li>
+					<li>
+						<a href="#" title="Google Plus" data-tippy-placement="top">
+							<i class="icon-brand-google-plus-g"></i>
+						</a>
+					</li>
+					<li>
+						<a href="#" title="LinkedIn" data-tippy-placement="top">
+							<i class="icon-brand-linkedin-in"></i>
+						</a>
+					</li>
+				</ul>
+				<div class="clearfix"></div>
+			</div>
+			<!-- Footer / End -->
+
+		</div>
+	</div>
+	<!-- Dashboard Content / End -->
 
         </div>
         <!-- Dashboard Container / End -->
@@ -549,14 +582,93 @@
 
 
 
+<!-- Request Acceptance Popup
+================================================== -->
+<div id="small-dialog-1" class="zoom-anim-dialog mfp-hide dialog-with-tabs">
+
+        <!--Tabs -->
+        <div class="sign-in-form">
+    
+            <ul class="popup-tabs-nav">
+                <li><a href="#tab1">Accept Offer</a></li>
+            </ul>
+    
+            <div class="popup-tabs-container">
+    
+                <!-- Tab -->
+                <div class="popup-tab-content" id="tab">
+                    
+                    <!-- Welcome Text -->
+                    <div class="welcome-text">
+                        <h3>Accept Offer From David</h3>
+                        
+    
+                    </div>
+    
+                    <form id="terms">
+                        <div class="radio">
+                            <input id="radio-1" name="radio" type="radio" required>
+                            <label for="radio-1"><span class="radio-label"></span>  I have read and agree to the Terms and Conditions</label>
+                        </div>
+                    </form>
+    
+                    <!-- Button -->
+                    <button class="margin-top-15 button full-width button-sliding-icon ripple-effect" type="submit" form="terms">Accept <i class="icon-material-outline-arrow-right-alt"></i></button>
+    
+                </div>
+    
+            </div>
+        </div>
+    </div>
+    <!-- Bid Acceptance Popup / End -->
+    
+    
+    <!-- Send Direct Message Popup
+    ================================================== -->
+    <div id="small-dialog-2" class="zoom-anim-dialog mfp-hide dialog-with-tabs">
+    
+        <!--Tabs -->
+        <div class="sign-in-form">
+    
+            <ul class="popup-tabs-nav">
+                <li><a href="#tab2">Send Message</a></li>
+            </ul>
+    
+            <div class="popup-tabs-container">
+    
+                <!-- Tab -->
+                <div class="popup-tab-content" id="tab2">
+                    
+                    <!-- Welcome Text -->
+                    <div class="welcome-text">
+                        <h3>Direct Message To David</h3>
+                    </div>
+                        
+                    <!-- Form -->
+                    <form method="post" id="send-pm">
+                            <div class="form-group">
+                            <textarea name="textarea" rows="5" class="form-control"  placeholder="Message" class="with-border"></textarea>
+                            </div>
+                    </form>
+                    
+                    <!-- Button -->
+                    <button class="button full-width button-sliding-icon ripple-effect" type="submit" form="send-pm">Send <i class="icon-material-outline-arrow-right-alt"></i></button>
+    
+                </div>
+    
+            </div>
+        </div>
+    </div>
+    <!-- Send Direct Message Popup / End -->
+    
 
 
     <!-- Scripts
 ================================================== -->
     <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/bootstrap/bootstrap.min.js"></script>
     <script src="vendors/jquery-validation/dist/jquery.validate.min.js"></script>
     <script src="vendors/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+    <script src="vendors/sweetalert2/sweetalert2.min.js"></script>
     <script src="js/mmenu.min.js"></script>
     <script src="js/tippy.all.min.js"></script>
     <script src="js/owl-carousel/owl.carousel.min.js"></script>
