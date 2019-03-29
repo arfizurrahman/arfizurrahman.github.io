@@ -1,0 +1,494 @@
+/* =================================================
+                Bootstrap 4 Media Queries
+================================================== */
+
+
+/* Large Devices (Desktops & Laptops) */
+
+@media (min-width: 1200px) and (max-width: 1299px) {}
+
+/* Medium Devices (Landscape Tablets & Medium Desktops/Laptops) */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .btn-general {
+        padding: 8px 30px;
+        font-size: 15px;
+    }
+
+    .banner-btn-group .btn-general {
+        font-size: 15px;
+        padding: 8px 35px;
+    }
+
+    .join-community .btn-general {
+        font-size: 18px;
+        padding: 8px 35px;
+    }
+
+    .service {
+        min-height: 620px;
+    }
+    label, legend {
+        font-size: 14px;
+    }
+    .dashboard-box .content.with-padding {
+        padding: 25px;
+    }
+}
+
+/* Small Devices (Potrait Tablets & Small Desktops/Laptops) */
+@media (min-width: 768px) and (max-width: 991px) {
+
+    /* Generic */
+    p {
+        font-size: 13px;
+        line-height: 23px;
+    }
+
+    .btn-general {
+        padding: 8px 35px;
+        font-size: 12px;
+    }
+
+    .home-content-wrapper {
+        height: 80vh;
+    }
+
+    .home-content-left h1 {
+        font-size: 30px;
+        line-height: 1.3em;
+        margin-bottom: 20px;
+    }
+
+    .home-content-left h2 {
+        font-size: 25px;
+    }
+
+    .home-content-left p {
+        font-size: 13px;
+    }
+
+    .banner-btn-group .btn-general {
+        font-size: 12px;
+        padding: 7px 30px;
+    }
+
+    .section-heading {
+        margin-bottom: 50px;
+        line-height: 45px;
+    }
+
+    .section-heading h2 {
+        margin-bottom: 5px;
+    }
+
+    .service {
+        min-height: 714px;
+    }
+
+    .svg-icon {
+        height: 80px;
+    }
+
+    .service h5 {
+        font-size: 18px;
+    }
+
+    
+
+    .step {
+        min-height: 324px;
+        text-align: center;
+    }
+
+    .step h5 {
+        font-size: 18px;
+        margin-top: 10px;
+    }
+
+    .content-box-sm {
+        padding: 50px 0 70px 0;
+    }
+
+    .about .content-box-sm {
+        padding-bottom: 70px;
+    }
+
+    .choose-us-content h4 {
+        font-size: 22px;
+    }
+
+    .choose-us-content h4 i {
+        font-size: 18px;
+    }
+
+    .benefits h3 {
+        font-size: 24px;
+    }
+
+    .client-area .content-box-sm {
+        padding: 50px 0 50px 0;
+    }
+
+    .join-community .btn-general {
+        font-size: 18px;
+        padding: 8px 35px;
+    }
+
+    .contact .contact-info {
+        top: 150px;
+        padding: 20px;
+    }
+
+    .about h4 {
+        font-size: 18px;
+    }
+
+    .contact .svg-icon {
+        height: 40px;
+    }
+
+    .contact .icon-box h5 {
+        font-size: 16px;
+    }
+
+    #map {
+        height: 500px;
+    }
+
+    .footer_intro {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    ul.contact-options li {
+        margin-top: 8px;
+    }
+}
+
+/* Extra Small Devices ( Landscape phones & Potrait Tablets) */
+@media (max-width: 767px) {
+
+    /* Generic */
+    p {
+        font-size: 13px;
+        line-height: 23px;
+    }
+
+    .btn-general {
+        padding: 8px 35px;
+        font-size: 12px;
+    }
+
+    .home-content-wrapper {
+        height: 120vh;
+    }
+
+    .home-content-left h1 {
+        font-size: 30px;
+        line-height: 1.3em;
+        margin-bottom: 20px;
+    }
+
+    .home-content-left h2 {
+        font-size: 25px;
+    }
+
+    .home-content-left p {
+        font-size: 13px;
+        margin: 8px 2px 30px 2px;
+    }
+
+
+
+    .home-content-left {
+        text-align: center;
+    }
+
+    .home-content-right img {
+        height: 240px;
+        margin-top: 40px;
+    }
+
+
+
+    .btn-general {
+        font-weight: 500;
+    }
+
+    .banner-btn-group .btn-general {
+        font-size: 12px;
+        padding: 7px 30px;
+    }
+
+    .section-heading {
+        margin-bottom: 50px;
+        line-height: 45px;
+    }
+
+    .section-heading h2 {
+        margin-bottom: 5px;
+        font-size: 28px;
+    }
+
+    .section-heading-left h2 {
+        font-size: 28px;
+    }
+
+    .join-community h4 {
+        font-size: 24px;
+    }
+
+    .service {
+        min-height: 440px;
+        margin-top: 15px;
+    }
+
+    .svg-icon {
+        height: 80px;
+    }
+
+    .service h5 {
+        font-size: 18px;
+    }
+
+    .service-details p {
+        line-height: 21px;
+    }
+
+    .step {
+        min-height: 270px;
+        margin-top: 15px;
+    }
+
+    .step h5 {
+        font-size: 18px;
+        margin-top: 10px;
+    }
+
+    .content-box-sm {
+        padding: 50px 0 70px 0;
+    }
+
+    .about .content-box-sm {
+        padding-bottom: 70px;
+    }
+
+    .choose-us-content h4 {
+        font-size: 20px;
+    }
+
+    .choose-us-content h4 i {
+        font-size: 16px;
+    }
+
+    .try-us h5 {
+        font-size: 16px;
+    }
+
+    .benefits h3 {
+        font-size: 22px;
+    }
+
+    .benefits ul li {
+        font-size: 14px;
+    }
+
+    .client-area .content-box-sm {
+        padding: 50px 0 50px 0;
+    }
+
+    .join-community .btn-general {
+        font-size: 18px;
+        padding: 8px 35px;
+    }
+
+    .join-community {
+        line-height: 25px;
+    }
+
+    .join-community strong {
+        font-size: 16px;
+    }
+
+    .job-career {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .job-career p {
+        line-height: 25px;
+        font-size: 15px;
+    }
+
+    .contact .contact-info {
+        top: 150px;
+        padding: 20px;
+        width: 95%;
+    }
+
+    .about h4 {
+        font-size: 18px;
+    }
+
+    .contact .svg-icon {
+        height: 30px;
+    }
+
+    .contact .icon-box h5 {
+        font-size: 14px;
+    }
+
+    contact .icon-box h6 {
+        font-size: 12px;
+    }
+
+    #map {
+        height: 500px;
+    }
+
+    .footer_intro {
+        text-align: center;
+        margin-bottom: 35px;
+    }
+
+    ul.contact-options li {
+        margin-top: 8px;
+    }
+
+
+
+    .footer_col {
+        margin-top: 15px;
+        text-align: center;
+    }
+
+
+}
+
+/* Extra Small Devices ( Potrait phones & Smaller Devices) */
+@media (max-width: 480px) {
+    .home-content-left p {
+        font-size: 11px;
+        line-height: 20px;
+        margin: 8px 2px 30px 2px;
+    }
+
+    .home-content-left h1 {
+        font-size: 25px;
+        line-height: 1.3em;
+        margin-bottom: 0px;
+    }
+
+    .home-content-left h2 {
+        font-size: 20px;
+    }
+
+    .choose-us-content h4 {
+        font-size: 16px;
+    }
+
+    .choose-us-content h4 i {
+        font-size: 15px;
+    }
+
+    .benefits h3 {
+        font-size: 18px;
+    }
+
+    .benefits ul li {
+        font-size: 12px;
+    }
+
+    .join-community .btn-general {
+        font-size: 11px;
+        padding: 7px 19px;
+    }
+
+    .banner-btn-group .btn-general {
+        font-size: 12px;
+        padding: 7px 18px;
+    }
+    
+    .about .content-box-sm {
+        padding-bottom: 37px;
+    }
+
+    .client-area .content-box-sm {
+        padding: 43px 0 19px 0;
+    }
+
+    .client-area .content-box-sm {
+        padding: 43px 0 19px 0;
+    }
+
+    .job-career {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .job-career p {
+        font-size: 13px;
+    }
+
+    .join-community strong {
+        font-size: 12px;
+    }
+
+    .contact .contact-info {
+        width: 95%;
+        top: 170px;
+    }
+
+    .contact .icon-box h6 {
+        margin: 10px 0 5px 0;
+        font-size: 8px;
+    }
+
+    .contact .icon-box h5 {
+        font-size: 8px;
+    }
+
+    .contact .svg-icon {
+        height: 20px;
+    }
+
+    .footer_col ul li {
+        margin-bottom: 4px;
+
+    }
+
+    .footer_col_title {
+        font-size: 15px;
+    }
+
+    .footer_col ul li a {
+        font-size: 14px;
+        line-height: 13px;
+    }
+
+    .section-heading h2 {
+        margin-bottom: 5px;
+        font-size: 25px;
+    }
+
+    .section-heading-left h2 {
+        font-size: 25px;
+    }
+
+    .join-community h4 {
+        font-size: 20px;
+    }
+
+    .about h4 {
+        font-size: 16px;
+    }
+    .dashboard-box .content.with-padding {
+        padding: 20px;
+    }
+    .notify-box {
+        margin-bottom: 20px
+    }
+}
+
+/* Extra Small Devices ( Potrait phones & Very Smaller Devices) */
+@media (max-width: 320px) {}
