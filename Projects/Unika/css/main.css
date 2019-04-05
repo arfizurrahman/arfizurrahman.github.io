@@ -2394,13 +2394,12 @@ em.mm-counter + a.mm-fullsubopen + span {
 ====================================== */
 
 
-
-
-.pagination {
+.pagination:not(#datatable.pagination) {
     margin: 0;
     text-align: center;
     display: block;
 }
+
 
 .pagination-next-prev {
     position: relative;
@@ -4321,7 +4320,8 @@ select.selectpicker {
 #pass-settings-btn,
 #account-settings-btn,
 #skill-settings-btn,
-#payment-settings-btn {
+#payment-settings-btn ,
+#shift-settings-btn {
     display: none;
 }
 
@@ -8146,6 +8146,9 @@ body .button.big i {
 }
 
 
+.table-action a {
+    font-size: 22px;
+}
 
 
 
@@ -12272,6 +12275,7 @@ ul.user-menu-small-nav li a:hover i,
 #navigation ul li a.current, 
 #navigation ul li a.current:after, 
 #navigation ul li:hover a,
-.edit-icon i{
+.edit-icon i,
+.table-action a:hover {
     color: #1689D6;
 }

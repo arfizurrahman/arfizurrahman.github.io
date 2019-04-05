@@ -748,7 +748,7 @@
                         'Good Job!',
                         'The submission was successful',
                         'success'
-                      )
+                    )
                 }
             }).validate({
                 rules: {
@@ -853,7 +853,7 @@
                         'Good Job!',
                         'The submission was successful',
                         'success'
-                      )
+                    )
                 }
             }).validate({
                 rules: {
@@ -998,6 +998,19 @@
                 changeYear: true
             });
         });
+        $(function () {
+            $("#jobEndDate").datepicker({
+                changeMonth: true,
+                changeYear: true
+            });
+        });
+        $(function () {
+            $("#jobStartDate").datepicker({
+                changeMonth: true,
+                changeYear: true
+            });
+        });
+
         /*----------------------------------------------------*/
         /*  Inline CSS replacement for backgrounds
         /*----------------------------------------------------*/
@@ -1158,7 +1171,7 @@
         ====================================== */
 
 
-       
+
         $('#profile-edit').on('click', function () {
             $('#address, #country, #dateOfBirth, #city, #zip, #selfIntroduction').removeAttr('disabled');
             $('#profile-settings-btn').css('display', 'block');
@@ -1189,6 +1202,12 @@
 
         });
 
+        $('#shift-price-edit').on('click', function () {
+            $('.form-control').removeAttr('disabled');
+            $('#shift-settings-btn').css('display', 'block');
+
+        });
+
         $('.removeRequest').on('click', function () {
             Swal.fire({
                 title: 'Are you sure?',
@@ -1198,23 +1217,51 @@
                 confirmButtonColor: '#3085d6',
                 cancelButtonColor: '#d33',
                 confirmButtonText: 'Yes, delete it!'
-              }).then((result) => {
+            }).then((result) => {
                 if (result.value) {
-                    $(this).parent().closest('li').fadeOut(800, function() {
+                    $(this).parent().closest('li').fadeOut(800, function () {
                         $(this).remove();
                     });
-                   // $(this).parent().closest('li').remove();
-                  Swal.fire(
-                    'Deleted!',
-                    'Your file has been deleted.',
-                    'success'
-                  )
+                    // $(this).parent().closest('li').remove();
+                    Swal.fire(
+                        'Deleted!',
+                        'Your file has been deleted.',
+                        'success'
+                    )
                 }
-              })
-            
+            })
+
 
         });
-       
+
+        $(document).ready(function () {
+            var datatable = $('#datatable').DataTable();
+
+            $('#datatable').on('click', '.table-btn-dlt', function () {
+                var button = $(this);
+                Swal.fire({
+                    title: 'Are you sure?',
+                    text: "You won't be able to revert this!",
+                    type: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Yes, delete it!'
+                }).then((result) => {
+                    if (result.value) {
+                        datatable.row(button.parents("tr")).remove().draw();
+                        // $(this).parent().closest('li').remove();
+                        Swal.fire(
+                            'Deleted!',
+                            'Your file has been deleted.',
+                            'success'
+                        )
+                    }
+                })
+
+            });
+        });
+
 
 
     });
