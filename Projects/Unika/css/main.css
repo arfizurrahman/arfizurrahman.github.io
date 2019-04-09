@@ -13,7 +13,6 @@
 @import 'icons.css';
 
 
-
 /*@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900|Roboto:300,400,500,700,900');*/
 @import url('https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i|Quicksand:400,500,700');
 
@@ -5889,12 +5888,14 @@ fieldset {
     color: #999;
 }
 
-.title {
+.content .title {
     align-items: center;
     -moz-align-items: center;
     -webkit-align-items: center;
     -o-align-items: center;
     -ms-align-items: center;
+    position: absolute;
+    left: -999em;
 }
 
 .number {
@@ -5951,10 +5952,6 @@ fieldset {
         margin-left: auto;
         margin-right: auto;
     }
-
-
-
-
 
     .fieldset-content {
         padding-right: 0px;
