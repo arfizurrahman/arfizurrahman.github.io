@@ -790,8 +790,12 @@ a.btn-send > i {
   overflow: hidden;
 }
 
+.about-me a {
+  color: #ccbc2b;
+}
+
 .about-me span {
-  color: #e5d53e;
+  color: #ccbc2b;
 }
 
 .about-me,
